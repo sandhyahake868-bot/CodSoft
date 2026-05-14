@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexCore — The Future is Now</title>
+
+  <!-- Google Fonts: Display + Body pairing -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Syne:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER — Sticky navigation bar with logo + links
+  ============================================================ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <span class="logo__bracket">[</span>NEX<span class="logo__accent">CORE</span><span class="logo__bracket">]</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav" id="nav">
+        <a href="#home"         class="nav__link">Home</a>
+        <a href="#about"        class="nav__link">About</a>
+        <a href="#services"     class="nav__link">Services</a>
+        <a href="#features"     class="nav__link">Features</a>
+        <a href="#contact"      class="nav__link">Contact</a>
+      </nav>
+
+      <!-- Hamburger button (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- ============================================================
+       HERO — Full-screen banner with heading + CTA
+  ============================================================ -->
+  <section class="hero" id="home">
+    <!-- Grid overlay decoration -->
+    <div class="hero__grid" aria-hidden="true"></div>
+
+    <!-- Glowing orbs for atmosphere -->
+    <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+    <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+
+    <div class="container hero__content">
+      <div class="hero__badge">⬡ Next-Gen Technology Platform</div>
+
+      <h1 class="hero__heading">
+        Build Beyond<br />
+        <span class="hero__heading--accent">Limits.</span>
+      </h1>
+
+      <p class="hero__sub">
+        NexCore delivers enterprise-grade AI infrastructure, blazing APIs, and
+        developer tooling that transforms how teams ship software at scale.
+      </p>
+
+      <div class="hero__actions">
+        <a href="#features" class="btn btn--primary">Get Started</a>
+        <a href="#about"    class="btn btn--ghost">Learn More →</a>
+      </div>
+
+      <!-- Floating stat pills -->
+      <div class="hero__stats">
+        <div class="stat"><span class="stat__num">99.9%</span><span class="stat__label">Uptime SLA</span></div>
+        <div class="stat__divider"></div>
+        <div class="stat"><span class="stat__num">2.4ms</span><span class="stat__label">Avg. Latency</span></div>
+        <div class="stat__divider"></div>
+        <div class="stat"><span class="stat__num">120k+</span><span class="stat__label">Developers</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       ABOUT — Two-column intro with text + visual
+  ============================================================ -->
+  <section class="section about" id="about">
+    <div class="container about__inner">
+
+      <!-- Left: text -->
+      <div class="about__text reveal">
+        <span class="section-tag">// about us</span>
+        <h2 class="section-heading">We Engineer<br /><em>Tomorrow's</em> Stack</h2>
+        <p>
+          Founded in 2020, NexCore is a developer-first platform built to handle
+          the complexity of modern distributed systems. We obsess over performance,
+          security, and DX so your team can obsess over shipping features.
+        </p>
+        <p>
+          From real-time data pipelines to AI-powered microservices, our
+          infrastructure scales effortlessly whether you serve ten users or ten million.
+        </p>
+        <a href="#services" class="btn btn--primary" style="margin-top:1.5rem">Explore Services</a>
+      </div>
+
+      <!-- Right: visual card -->
+      <div class="about__visual reveal">
+        <div class="code-card">
+          <div class="code-card__bar">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+            <span class="code-card__title">nexcore.config.js</span>
+          </div>
+          <pre class="code-card__body"><code><span class="c-keyword">import</span> <span class="c-var">NexCore</span> <span class="c-keyword">from</span> <span class="c-str">'@nexcore/sdk'</span><span class="c-punc">;</span>
+
+<span class="c-keyword">const</span> <span class="c-var">client</span> <span class="c-punc">=</span> <span class="c-keyword">new</span> <span class="c-fn">NexCore</span><span class="c-punc">({</span>
+  <span class="c-prop">region</span><span class="c-punc">:</span>  <span class="c-str">'ap-south-1'</span><span class="c-punc">,</span>
+  <span class="c-prop">tier</span><span class="c-punc">:</span>    <span class="c-str">'enterprise'</span><span class="c-punc">,</span>
+  <span class="c-prop">ai</span><span class="c-punc">:</span>     <span class="c-keyword">true</span><span class="c-punc">,</span>
+<span class="c-punc">});</span>
+
+<span class="c-comment">// Deploy in one line</span>
+<span class="c-keyword">await</span> <span class="c-var">client</span><span class="c-punc">.</span><span class="c-fn">deploy</span><span class="c-punc">(</span><span class="c-var">app</span><span class="c-punc">);</span>
+<span class="c-comment">// ✓ Live in 340ms</span></code></pre>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SERVICES — Icon cards in a grid
+  ============================================================ -->
+  <section class="section services" id="services">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-tag">// services</span>
+        <h2 class="section-heading">What We Offer</h2>
+        <p class="section-sub">A complete suite of tools designed for high-performance teams.</p>
+      </div>
+
+      <div class="services__grid">
+
+        <div class="service-card reveal">
+          <div class="service-card__icon">⚡</div>
+          <h3>Edge Compute</h3>
+          <p>Run workloads at the edge with sub-millisecond cold starts and global PoPs across 40+ regions.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card__icon">🧠</div>
+          <h3>AI Inference</h3>
+          <p>Serve ML models at scale with our optimized inference engine — no GPU cluster management needed.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card__icon">🔒</div>
+          <h3>Zero-Trust Security</h3>
+          <p>End-to-end encryption, secret management, and RBAC baked into every layer of the platform.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card__icon">📊</div>
+          <h3>Real-Time Analytics</h3>
+          <p>Streaming dashboards and event pipelines that surface insights as they happen.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card__icon">🔄</div>
+          <h3>CI/CD Pipelines</h3>
+          <p>One-click deployments, rollback controls, and progressive delivery built directly into your workflow.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card__icon">🌐</div>
+          <h3>Global CDN</h3>
+          <p>Smart caching and asset delivery that puts your content within 10ms of 95% of the world's internet users.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FEATURES — Detailed highlight blocks
+  ============================================================ -->
+  <section class="section features" id="features">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-tag">// features</span>
+        <h2 class="section-heading">Built Different</h2>
+        <p class="section-sub">Every detail is engineered for the developer who refuses to compromise.</p>
+      </div>
+
+      <div class="features__list">
+
+        <div class="feature-row reveal">
+          <div class="feature-row__num">01</div>
+          <div class="feature-row__body">
+            <h3>Instant Deployments</h3>
+            <p>Push to main and watch your app go live in under a second. Our build system uses incremental compilation and smart caching to eliminate wasted cycles.</p>
+          </div>
+          <div class="feature-row__tag">PERFORMANCE</div>
+        </div>
+
+        <div class="feature-row reveal">
+          <div class="feature-row__num">02</div>
+          <div class="feature-row__body">
+            <h3>Composable Infrastructure</h3>
+            <p>Mix databases, queues, storage, and functions using declarative config files. Infrastructure as code with zero boilerplate and full type safety.</p>
+          </div>
+          <div class="feature-row__tag">DX</div>
+        </div>
+
+        <div class="feature-row reveal">
+          <div class="feature-row__num">03</div>
+          <div class="feature-row__body">
+            <h3>Observability First</h3>
+            <p>Traces, logs, and metrics in a single pane of glass. Auto-instrumented runtimes mean you get production visibility without writing a single line of telemetry code.</p>
+          </div>
+          <div class="feature-row__tag">MONITORING</div>
+        </div>
+
+        <div class="feature-row reveal">
+          <div class="feature-row__num">04</div>
+          <div class="feature-row__body">
+            <h3>SOC 2 Type II Certified</h3>
+            <p>Enterprise-grade compliance, data residency controls, and audit logs that satisfy even the most security-conscious organizations.</p>
+          </div>
+          <div class="feature-row__tag">SECURITY</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       TESTIMONIALS — Customer review cards
+  ============================================================ -->
+  <section class="section testimonials">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-tag">// testimonials</span>
+        <h2 class="section-heading">Trusted by Builders</h2>
+      </div>
+
+      <div class="testimonials__grid">
+
+        <div class="testi-card reveal">
+          <p class="testi-card__quote">"NexCore cut our deployment pipeline from 12 minutes to under 45 seconds. That compounding time-save is genuinely life-changing for our team."</p>
+          <div class="testi-card__author">
+            <div class="testi-card__avatar" style="background: var(--accent-1)">A</div>
+            <div>
+              <strong>Anya Mehta</strong>
+              <span>CTO, Helion Labs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card reveal">
+          <p class="testi-card__quote">"The AI inference API is embarrassingly easy to use. We went from prototype to production model serving in a single afternoon — no DevOps required."</p>
+          <div class="testi-card__author">
+            <div class="testi-card__avatar" style="background: var(--accent-2)">K</div>
+            <div>
+              <strong>Karan Sethi</strong>
+              <span>ML Engineer, Pulsar AI</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card reveal">
+          <p class="testi-card__quote">"We handle 40M daily active users on NexCore infrastructure without a single SLA breach in 18 months. The reliability is unmatched at this price point."</p>
+          <div class="testi-card__author">
+            <div class="testi-card__avatar" style="background: var(--accent-3)">R</div>
+            <div>
+              <strong>Riya Nair</strong>
+              <span>VP Engineering, FlowStack</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CTA — Final push section
+  ============================================================ -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-box reveal">
+        <div class="cta-box__glow" aria-hidden="true"></div>
+        <span class="section-tag">// get started</span>
+        <h2>Ready to Ship Faster?</h2>
+        <p>Join 120,000+ developers already building on NexCore. Free tier. No credit card required.</p>
+        <div class="cta-box__actions">
+          <a href="#contact" class="btn btn--primary btn--lg">Create Free Account</a>
+          <a href="#services" class="btn btn--ghost">See Pricing →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONTACT FORM (bonus section)
+  ============================================================ -->
+  <section class="section contact" id="contact">
+    <div class="container contact__inner">
+      <div class="contact__info reveal">
+        <span class="section-tag">// contact</span>
+        <h2 class="section-heading">Get in Touch</h2>
+        <p>Have questions? Our team responds within 2 hours on business days.</p>
+        <div class="contact__details">
+          <div class="contact__item">📧 hello@nexcore.dev</div>
+          <div class="contact__item">📍 Mumbai · Singapore · Berlin</div>
+          <div class="contact__item">🕐 Mon–Fri, 9am–6pm IST</div>
+        </div>
+      </div>
+      <form class="contact__form reveal" id="contactForm">
+        <input type="text"  placeholder="Your name"    class="form-input" required />
+        <input type="email" placeholder="Email address" class="form-input" required />
+        <textarea placeholder="Your message..." class="form-input form-textarea" rows="5" required></textarea>
+        <button type="submit" class="btn btn--primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+
+      <!-- Brand column -->
+      <div class="footer__brand">
+        <a href="#" class="logo">
+          <span class="logo__bracket">[</span>NEX<span class="logo__accent">CORE</span><span class="logo__bracket">]</span>
+        </a>
+        <p>Enterprise infrastructure for the next generation of developers.</p>
+        <!-- Social icons -->
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="Twitter">𝕏</a>
+          <a href="#" class="social-icon" aria-label="GitHub">GH</a>
+          <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+          <a href="#" class="social-icon" aria-label="Discord">DS</a>
+        </div>
+      </div>
+
+      <!-- Quick links -->
+      <div class="footer__links">
+        <h4>Product</h4>
+        <a href="#services">Services</a>
+        <a href="#features">Features</a>
+        <a href="#">Pricing</a>
+        <a href="#">Changelog</a>
+      </div>
+
+      <div class="footer__links">
+        <h4>Developers</h4>
+        <a href="#">Documentation</a>
+        <a href="#">API Reference</a>
+        <a href="#">SDKs</a>
+        <a href="#">Status Page</a>
+      </div>
+
+      <div class="footer__links">
+        <h4>Company</h4>
+        <a href="#about">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <span>© 2025 NexCore Technologies. All rights reserved.</span>
+        <span>Privacy Policy · Terms of Service</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       DARK / LIGHT TOGGLE (floating button)
+  ============================================================ -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☀</button>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
